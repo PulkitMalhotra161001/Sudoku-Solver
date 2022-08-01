@@ -14,8 +14,21 @@ public class sudoku_solver {
 		
 		print(a);
 		System.out.println();
-		solve(a, 0, 0);
+		solve_sudoku(a);
 
+	}
+	
+	public static void solve_sudoku(int a[][]) {
+		for(int i=0;i<9;i++) {
+			for(int j=0;j<9;j++) {
+				if(a[i][j]<0 || a[i][j]>9) {
+					System.out.println("Row: "+i+" Column: "+j+" Value is Invalid");
+					System.out.print("Value's must be between 0 and 9");
+					return;
+				}
+			}
+		}
+		solve(a,0,0);
 	}
 	
 	
