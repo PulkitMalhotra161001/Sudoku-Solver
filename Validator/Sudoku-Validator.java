@@ -43,7 +43,7 @@ public class sudoku_solver {
 		for(int i=0;i<3;i++) {
 			for(int j=0;j<3;j++) {
 				if(start_i+i==x && start_j+j==y)continue;
-				if(a[start_i+i][start_j+j]==val)
+				if(a[start_i+i][start_j+j]==val || a[start_i+i][start_j+j]<0 || a[start_i+i][start_j+j]>9)
 					return false;
 			}
 		}
